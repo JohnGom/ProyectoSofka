@@ -1,0 +1,25 @@
+<div class="container-login100">
+  <div class="wrap-login100">
+    <div class="login100-form-title">
+        <img class="image-wel" src="http://www.pertrinum.com/img/logosofka.png" alt="sofka">
+    </div>
+
+    <form class="login100-form" [formGroup]="loginForm">
+      <mat-form-field class="wrap-input100">
+        <input matInput placeholder="Usuario" id="username" formControlName="username" required>
+        <mat-error *ngIf="username.invalid && (username.dirty || username.touched)">
+          El usuario es <strong>requerida</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="wrap-input100">
+        <input matInput type="password" placeholder="Contraseña" id="password" formControlName="password" required>
+        <mat-error *ngIf="password.invalid && (password.dirty || password.touched)">
+          La contraseña es <strong>requerida</strong>
+        </mat-error>
+      </mat-form-field>
+      <button class="login100-form-btn" (click)="loginAuth()">
+        Login
+      </button>
+    </form>
+  </div>
+</div>

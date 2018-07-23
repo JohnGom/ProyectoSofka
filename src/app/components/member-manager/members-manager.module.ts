@@ -9,10 +9,12 @@ import { MatCardModule,
   MatIconModule,
   MatDialogModule,
   MatListModule,
+  MatToolbarModule,
   MatPaginatorModule } from '@angular/material';
 
 import { AddNewMemberComponent } from './add-new-member/add-new-member.component';
 import { ShowAllMembersComponent } from './show-all-members/show-all-members.component';
+import { HeaderComponent } from 'src/app/components/header/header.component';
 
 @NgModule({
   imports: [
@@ -25,11 +27,12 @@ import { ShowAllMembersComponent } from './show-all-members/show-all-members.com
     MatIconModule,
     MatDialogModule,
     MatListModule,
+    MatToolbarModule,
     MatPaginatorModule,
     FormsModule, 
     ReactiveFormsModule
   ],
-  declarations: [ AddNewMemberComponent, ShowAllMembersComponent ],
-  exports: [ AddNewMemberComponent, ShowAllMembersComponent ]
+  declarations: [ AddNewMemberComponent, ShowAllMembersComponent, HeaderComponent ],
+  exports: [ AddNewMemberComponent, ShowAllMembersComponent, HeaderComponent ]
 })
 export class MembersManagerModule { }

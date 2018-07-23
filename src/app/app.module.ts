@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MembersManagerModule } from './components/member-manager/members-manager.module';
 import { AppRoutingModule } from './components/app-routing.module';
+import { AuthModule } from 'src/app/components/auth/auth.module';
 
 import { AppComponent } from './app.component';
 
@@ -19,7 +20,8 @@ import { AppComponent } from './app.component';
     HttpClientModule,
     HttpModule,
     MembersManagerModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]
